@@ -7,3 +7,5 @@ typedef struct {
     char autor[50];
     int godina;
 } Knjiga;
+Knjiga biblioteka[MAX];
+int brojKnjiga = 0;
