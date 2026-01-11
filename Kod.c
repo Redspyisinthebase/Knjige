@@ -20,3 +20,17 @@ void dodaj_knjigu(char *naslov, char *autor, int godina) {
         printf("Biblioteka je puna!\n");
     }
 }
+// 2. Obrisi knjigu
+void obrisi_knjigu(char *naslov) {
+    for (int i = 0; i < brojKnjiga; i++) {
+        if (strcmp(biblioteka[i].naslov, naslov) == 0) {
+            for (int j = i; j < brojKnjiga - 1; j++) {
+                biblioteka[j] = biblioteka[j + 1];
+            }
+            brojKnjiga--;
+            printf("Knjiga '%s' obrisana.\n", naslov);
+            return;
+        }
+    }
+    printf("Knjiga nije pronadjena.\n");
+}
