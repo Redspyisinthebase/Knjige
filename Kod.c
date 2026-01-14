@@ -92,3 +92,7 @@ void sortiraj_po_godini() {
         }
     }
 }
+// 9. Vrati broj knjiga
+int broj_knjiga() {
+    return brojKnjiga;
+}
