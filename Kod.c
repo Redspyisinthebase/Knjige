@@ -68,3 +68,15 @@ void sortiraj_po_naslovu() {
         }
     }
 }
+// 7. Sortiraj po autoru
+void sortiraj_po_autoru() {
+    for (int i = 0; i < brojKnjiga - 1; i++) {
+        for (int j = i + 1; j < brojKnjiga; j++) {
+            if (strcmp(biblioteka[i].autor, biblioteka[j].autor) > 0) {
+                Knjiga temp = biblioteka[i];
+                biblioteka[i] = biblioteka[j];
+                biblioteka[j] = temp;
+            }
+        }
+    }
+}
