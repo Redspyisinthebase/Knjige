@@ -105,3 +105,14 @@ void sacuvaj_u_fajl(char *imeFajla) {
     }
     fclose(f);
 }
+// 11. Ucitaj iz fajla
+void ucitaj_iz_fajla(char *imeFajla) {
+    FILE *f = fopen(imeFajla, "r");
+    if (!f) return;
+    brojKnjiga = 0;
+    while (fscanf(f, "%49[^,],%49[^,],%d\n", biblioteka[brojKnjiga].naslov,
+                  biblioteka[brojKnjiga].autor, &biblioteka[brojKnjiga].godina) == 3) {
+        brojKnjiga++;
+    }
+    fclose(f);
+}
