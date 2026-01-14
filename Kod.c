@@ -96,3 +96,12 @@ void sortiraj_po_godini() {
 int broj_knjiga() {
     return brojKnjiga;
 }
+// 10. Sacuvaj u fajl
+void sacuvaj_u_fajl(char *imeFajla) {
+    FILE *f = fopen(imeFajla, "w");
+    if (!f) return;
+    for (int i = 0; i < brojKnjiga; i++) {
+        fprintf(f, "%s,%s,%d\n", biblioteka[i].naslov, biblioteka[i].autor, biblioteka[i].godina);
+    }
+    fclose(f);
+}
