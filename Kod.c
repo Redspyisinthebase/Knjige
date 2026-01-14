@@ -80,3 +80,15 @@ void sortiraj_po_autoru() {
         }
     }
 }
+// 8. Sortiraj po godini
+void sortiraj_po_godini() {
+    for (int i = 0; i < brojKnjiga - 1; i++) {
+        for (int j = i + 1; j < brojKnjiga; j++) {
+            if (biblioteka[i].godina > biblioteka[j].godina) {
+                Knjiga temp = biblioteka[i];
+                biblioteka[i] = biblioteka[j];
+                biblioteka[j] = temp;
+            }
+        }
+    }
+}
