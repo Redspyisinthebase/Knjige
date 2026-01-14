@@ -40,3 +40,11 @@ void prikazi_knjige() {
         printf("%s - %s (%d)\n", biblioteka[i].naslov, biblioteka[i].autor, biblioteka[i].godina);
     }
 }
+// 4. Pretrazi po naslovu
+void pretrazi_po_naslovu(char *naslov) {
+    for (int i = 0; i < brojKnjiga; i++) {
+        if (strstr(biblioteka[i].naslov, naslov)) {
+            printf("Pronadjeno: %s - %s (%d)\n", biblioteka[i].naslov, biblioteka[i].autor, biblioteka[i].godina);
+        }
+    }
+}
