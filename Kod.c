@@ -48,3 +48,11 @@ void pretrazi_po_naslovu(char *naslov) {
         }
     }
 }
+// 5. Pretrazi po autoru
+void pretrazi_po_autoru(char *autor) {
+    for (int i = 0; i < brojKnjiga; i++) {
+        if (strstr(biblioteka[i].autor, autor)) {
+            printf("Pronadjeno: %s - %s (%d)\n", biblioteka[i].naslov, biblioteka[i].autor, biblioteka[i].godina);
+        }
+    }
+}
