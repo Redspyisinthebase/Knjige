@@ -116,3 +116,24 @@ void ucitaj_iz_fajla(char *imeFajla) {
     }
     fclose(f);
 }
+// Glavni program
+int main() {
+    dodaj_knjigu("Na Drini cuprija", "Ivo Andric", 1945);
+    dodaj_knjigu("Seobe", "Miloš Crnjanski", 1929);
+    dodaj_knjigu("Prokleta avlija", "Ivo Andric", 1954);
+
+    printf("Sve knjige:\n");
+    prikazi_knjige();
+
+    printf("\nPretraga po autoru 'Andric':\n");
+    pretrazi_po_autoru("Andric");
+
+    printf("\nSortirane po naslovu:\n");
+    sortiraj_po_naslovu();
+    prikazi_knjige();
+
+    printf("\nUkupan broj knjiga: %d\n", broj_knjiga());
+
+    sacuvaj_u_fajl("biblioteka.txt");
+    return 0;
+}
