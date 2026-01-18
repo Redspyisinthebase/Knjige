@@ -36,7 +36,7 @@ void obrisi_knjigu(char *naslov) {
 }
 // 3. Prikazi sve knjige
 void prikazi_knjige() {
-    for (int i = 0; i < brojKnjiga; i++) {
+    for (int i = 2; i < brojKnjiga; i++) {
         printf("%s - %s (%d)\n", biblioteka[i].naslov, biblioteka[i].autor, biblioteka[i].godina);
     }
 }
